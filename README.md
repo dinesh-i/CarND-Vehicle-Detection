@@ -22,7 +22,7 @@ The goals / steps of this project are the following:
 
 [video1]: ./vehicles_tracked_on_project_video.mp4	
 
-**Histogram of Oriented Gradients (HOG)
+## Histogram of Oriented Gradients (HOG)
 The method get_hog_features() gets the hog features of the image for the specified single channel or all the channels. It supports visualization of the resultant hog image and cell#5 has a sample hog image of a car. Other utility methods like bin_spatial() and color_hist() are used from the lessons to extract spatial and color histogram features.
 
 Below are the different values of the parameters used:
@@ -70,11 +70,11 @@ YCrCb | 12 | 16 | 4 | 1 | (16, 16) | 16 | 12.49 | 0.96 |
 YCrCb | 12 | 16 | 4 | 2 | (16, 16) | 16 | 11.98 | 0.955 |
 HLS | 9 | 8 | 2 | 1 | (16, 16) | 16 | 21.79 | 0.9838 |
 
-****Training:
+#### Training:
 The train() method has the implementation to train a Linear SVC classifier. The classifier uses the hog, bin spatial and color histogram features and trains the model based on the label set provided for the categories vehicles and non-vehicles.
 
 
-**Sliding Window Search
+## Sliding Window Search
 The find_cars() method extracts features using hog sub-sampling and make predictions.
  The parameters y_start and y_stop decide the y-axis range of the image to be searched. This will help us to avoid searching unwanted areas of the image like sky, tree top etc. and focus only on the region where cars will potentially appear. 
 This method extracts the hog, spatial and color histogram features. The rectangles where the presence of car is predicted is returned by this method.
@@ -101,9 +101,9 @@ I've introduced a flag called "snapshot_needed" which let me to take snapshot of
 :--:|
 ![alt text][image2] |
 
-| Output Image After Threshold is Applied |
+| Output Image|
 :--:|
-![alt text] [image3] |
+![alt text][image3] |
 
 The last 5 cells in the notebook shows different stages of the image in the pipeline. 
 
@@ -111,11 +111,11 @@ To filter false positives, the image heatmap map was averaged over 4 consecutive
 
 Even after the above implementation, lot of false positives were reported. I tried out different values of threshold to balance between false positives and true negatives. A value of 8 almost removed all false positives and failed to detect car in many scenarios. A value of 3 resulted in false positives and identified cars in most of the frames. So I decided to stick to the threshold value of 3.
 
-** Video Implementation
+## Video Implementation
 The video implementation uses the same pipeline() method described above. Identified vehicles are highlighted with a rectangular box. 
 
 This is a link to the project video processed by the pipeline -> [video1]
 
-**Open Challenges
+## Open Challenges
 * There are still false positives showing up in the video frame and vehicles are not identified in some cases too. Images with shadows are also detected as vehicles.
 * The execution time for the project video processing was around 20m 55s. This time should be improved further.
