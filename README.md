@@ -18,6 +18,7 @@ The goals / steps of this project are the following:
 [image1]: ./output_images/input_image890.jpg
 [image2]: ./output_images/output_image_with_boxes_image890.jpg
 [image3]: ./output_images/output_image890.jpg
+[image4]: ./output_images/output_image890.jpg
 
 [video1]: ./vehicles_tracked_on_project_video.mp4	
 
