@@ -18,6 +18,7 @@ The goals / steps of this project are the following:
 [image1]: ./output_images/input_image890.jpg
 [image2]: ./output_images/output_image_with_boxes_image890.jpg
 [image3]: ./output_images/output_image890.jpg
+
 [video1]: ./vehicles_tracked_on_project_video.mp4	
 
 **Histogram of Oriented Gradients (HOG)
@@ -91,10 +92,18 @@ The pipeline() method has the logic to invoke find_cars() with different scale a
 
 I've introduced a flag called "snapshot_needed" which let me to take snapshot of the given image when it passes through various stages of the pipeline. This helped me to get insight into the processing within the pipeline. 
 
-|Input Image| Potential Vehicles Highlighted | Output Image After Threshold is Applied |
-:--:|:--:|:--:|
-![alt text][image1] | ![alt text][image2] | ![alt text] [image3] |
-![alt text][image1]        |  ![alt text][image2]
+|Input Image|
+:--:|
+![alt text][image1] |
+
+| Potential Vehicles Highlighted |
+:--:|
+![alt text][image2] |
+
+| Output Image After Threshold is Applied |
+:--:|
+![alt text] [image3] |
+
 The last 5 cells in the notebook shows different stages of the image in the pipeline. 
 
 To filter false positives, the image heatmap map was averaged over 4 consecutive frames. This idea was adapted from https://github.com/darienmt/CarND-Vehicle-Detection-P5 
